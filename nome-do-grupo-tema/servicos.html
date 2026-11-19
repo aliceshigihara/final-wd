@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Serviços | [Nome do Projeto]</title>
+    <title>Serviços | DBH IFC</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -23,31 +23,72 @@
 
     <main class="page-content">
         <section class="section">
-            <h1>[Título da página de Serviços]</h1>
+            <h1>Personagens do Jogo</h1>
             <p>[Introdução dos serviços ou produtos]</p>
         </section>
 
         <section class="gallery-section">
             <h2>[Título da galeria]</h2>
             <div class="gallery">
-                <article class="gallery-item">
-                    <img src="img/imagem-1.jpg" alt="[Descrição da imagem 1]">
-                    <h3>[Título do item 1]</h3>
-                </article>
-                <article class="gallery-item">
-                    <img src="img/imagem-2.jpg" alt="[Descrição da imagem 2]">
-                    <h3>[Título do item 2]</h3>
-                </article>
-                <article class="gallery-item">
-                    <img src="img/imagem-3.jpg" alt="[Descrição da imagem 3]">
-                    <h3>[Título do item 3]</h3>
-                </article>
+                <article class="gallery-item" id="profile-card-1"></article>
+                <article class="gallery-item" id="profile-card-2"></article>
+                <article class="gallery-item" id="profile-card-3"></article>
             </div>
         </section>
     </main>
 
     <footer class="site-footer">
-        <p>[Nome do projeto] &copy; 2026</p>
+        <p>DBH IFC &copy; 2026</p>
     </footer>
+    <script src="js/profile-card.js"></script>
+    <script>
+        new ProfileCard('#profile-card-1', {
+            name: '[Título do item 1]',
+            title: '[Descrição do item 1]',
+            handle: 'item-1',
+            status: 'Disponível',
+            contactText: 'Ver mais',
+            avatarUrl: 'img/imagem-1.jpg',
+            miniAvatarUrl: 'img/imagem-1.jpg',
+            theme: 'dark',
+            holo: 0.8,
+            glare: 0.5,
+            tiltStrength: 12,
+            enableTilt: true,
+            intro: true
+        });
+
+        new ProfileCard('#profile-card-2', {
+            name: '[Título do item 2]',
+            title: '[Descrição do item 2]',
+            handle: 'item-2',
+            status: 'Disponível',
+            contactText: 'Ver mais',
+            avatarUrl: 'img/imagem-2.jpg',
+            miniAvatarUrl: 'img/imagem-2.jpg',
+            theme: 'dark',
+            holo: 0.8,
+            glare: 0.5,
+            tiltStrength: 12,
+            enableTilt: true,
+            intro: true
+        });
+
+        new ProfileCard('#profile-card-3', {
+            name: '[Título do item 3]',
+            title: '[Descrição do item 3]',
+            handle: 'item-3',
+            status: 'Disponível',
+            contactText: 'Ver mais',
+            avatarUrl: 'img/imagem-3.jpg',
+            miniAvatarUrl: 'img/imagem-3.jpg',
+            theme: 'dark',
+            holo: 0.8,
+            glare: 0.5,
+            tiltStrength: 12,
+            enableTilt: true,
+            intro: true
+        });
+    </script>
 </body>
 </html>
