@@ -107,7 +107,7 @@
             const options = this.options;
             this.name.textContent = options.name;
             this.title.textContent = options.title;
-            this.handle.textContent = options.handle ? `@${options.handle}` : '';
+            this.handle.textContent = options.handle || '';
             this.status.textContent = options.status;
             this.contact.textContent = options.contactText;
             this.photo.src = options.avatarUrl || '';
