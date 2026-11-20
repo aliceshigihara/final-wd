@@ -243,3 +243,11 @@ SEÇÃO 5: RESPONSIVIDADE
     .main-nav ul { flex-wrap: wrap; }
     .gallery { grid-template-columns: 1fr; }
 }
+
+p {
+    color: white;
+}
+
+li {
+    color: aliceblue;
+}
