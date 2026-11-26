@@ -1,7 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wdth,wght@8..144,25..151,100..1000&display=swap');
-.text-pressure-container { position: relative; width: 65%; max-width: 760px; margin: 0 auto 2rem; }
+.text-pressure-container { position: relative; width: 65%; max-width: 760px; margin: 0 auto; }
 .landing-page .text-pressure-title { font-family: 'Roboto Flex', Roboto, Arial, sans-serif; font-size: 8vw; font-weight: 100; line-height: 1; text-transform: uppercase; margin: 0; text-align: center; user-select: none; white-space: nowrap; width: 100%; color: white; display: flex; justify-content: space-between; transform-origin: center top; }
 .text-pressure-title span { display: inline-block; font-variation-settings: 'wght' 100, 'wdth' 25, 'ital' 0; }
-.landing-page .hero-tagline { color: #1f3a5f; font-size: 2em; font-weight: bold; margin-bottom: 1rem; }
+/* Anchor the animated title itself at the resting center of Magic Rings. */
+.landing-page .landing-hero-content { position:absolute; inset:0; display:grid; place-items:center; pointer-events:none; }
+.landing-page .site-header { z-index:3; }
+.landing-page .hero { position:relative; width:100%; padding:0 5%; pointer-events:none; }
+.landing-page .text-pressure-container { pointer-events:auto; }
+.hero-copy { position:absolute; top:calc(100% + clamp(16px, 3vh, 32px)); left:50%; transform:translateX(-50%); width:min(90%, 760px); text-align:center; }
+.landing-page .hero-tagline { color:#e1efff; font-family:Inter,system-ui,sans-serif; font-size:clamp(1rem, 2vw, 1.55rem); font-weight:400; letter-spacing:.035em; line-height:1.5; margin:0; text-shadow:0 0 24px rgba(56,189,248,.24); }
+.landing-page .hero-subtitle { color:#8eb4d6; font-family:Inter,system-ui,sans-serif; font-size:clamp(.65rem, 1vw, .8rem); font-weight:500; letter-spacing:.2em; text-transform:uppercase; margin-top:1rem; }
+@media(max-height:480px){ .hero-copy {top:calc(100% + 10px);} .landing-page .hero-subtitle{margin-top:.35rem;} }
+
 
 @media (max-width: 600px) { .text-pressure-container { width: 88%; } }

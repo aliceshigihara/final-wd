@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato | [Nome do Projeto]</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gooey-navbar.css">
+    <script src="js/gooey-navbar.js" defer></script>
 </head>
 <body>
     <header class="site-header">
         <a class="logo" href="index.html">
             <img src="img/logo.png" alt="[Descrição da logo do projeto]">
         </a>
-        <nav class="main-nav" aria-label="Navegação principal">
+        <nav class="main-nav gooey-nav" aria-label="Navegação principal">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="sobre.html">Sobre</a></li>
@@ -57,5 +59,8 @@
         <p>[detroit] &copy; 2026</p>
     </footer>
     <script src="js/script.js"></script>
+    <script>
+    (()=>{const q=new URLSearchParams(location.search),plan=q.get('plano'),value=Number(q.get('valor'));if(['mensal','anual'].includes(plan)&&Number.isFinite(value)&&value>0){document.getElementById('message').value=`Gostaria de solicitar informações sobre a contratação de um androide no plano ${plan}, com orçamento de ${value.toLocaleString('pt-BR',{style:'currency',currency:'BRL'})}.`;}})();
+    </script>
 </body>
 </html>

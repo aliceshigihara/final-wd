@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/bento.css">
     <link rel="stylesheet" href="css/text-pressure.css">
+    <link rel="stylesheet" href="css/gooey-navbar.css">
+    <script src="js/gooey-navbar.js" defer></script>
+    <link rel="stylesheet" href="css/contract.css">
+    <script src="js/contract.js" defer></script>
 </head>
 <body class="landing-page">
     <div class="landing-intro">
@@ -15,7 +19,7 @@
         <a class="logo" href="index.html">
             <img src="img/CyberLife_Logo_DBH_transparente.png" alt="[Descrição da logo do projeto]">
         </a>
-        <nav class="main-nav" aria-label="Navegação principal">
+        <nav class="main-nav gooey-nav" aria-label="Navegação principal">
             <ul>
                 <li><a class="active" href="index.html">Home</a></li>
                 <li><a href="sobre.html">Sobre</a></li>
@@ -28,8 +32,10 @@
     <div class="landing-hero-content">
         <section id="inicio" class="hero">
             <div class="text-pressure-container"><h1 class="text-pressure-title" aria-label="CyberLife"><span aria-hidden="true">C</span><span aria-hidden="true">Y</span><span aria-hidden="true">B</span><span aria-hidden="true">E</span><span aria-hidden="true">R</span><span aria-hidden="true">L</span><span aria-hidden="true">I</span><span aria-hidden="true">F</span><span aria-hidden="true">E</span></h1></div>
-            <p class="hero-tagline">Conheça o jogo sobre o futuro de uma forma interativa!</p>
-            <p>[Subtítulo ou apresentação breve]</p>
+            <div class="hero-copy">
+                <p class="hero-tagline">Conheça o jogo sobre o futuro de uma forma interativa!</p>
+                <p class="hero-subtitle">Detroit: Become Human &nbsp;·&nbsp; 2038</p>
+            </div>
         </section>
 
     </div>
@@ -80,18 +86,28 @@
     <main class="landing-details">
         <div class="topography-backdrop" aria-hidden="true"><canvas id="topography-home"></canvas></div>
         <div class="landing-reveal">
-        <section class="section">
-            <h2>[Título da seção] plau</h2>
-            <article class="card">
-                <h3>[Título do artigo]</h3>
-                <p>[Conteúdo do artigo]</p>
-            </article>
+        <section class="contract-section" aria-labelledby="why-title">
+            <span class="contract-kicker">CYBERLIFE / 01</span>
+            <h2 id="why-title">Por que contratar um Androide?</h2>
+            <div class="rolling" aria-label="Motivos para contratar um androide" tabindex="0" aria-roledescription="carrossel">
+                <div class="roll-device"><button type="button" data-device="desktop" aria-pressed="true">Desktop</button><button type="button" data-device="mobile" aria-pressed="false">Mobile</button></div><div class="rolling-stage"></div>
+                <div class="rolling-controls"><button type="button" data-prev aria-label="Anterior">←</button><div class="rolling-dots"></div><button type="button" data-next aria-label="Próximo">→</button><button type="button" data-pause aria-label="Pausar reprodução automática">Ⅱ</button></div>
+            </div>
         </section>
-
-        <aside class="aside">
-            <h2>[Título complementar]</h2>
-            <p>[Informação complementar]</p>
-        </aside>
+        <section class="contract-section" aria-labelledby="info-title">
+            <span class="contract-kicker">CYBERLIFE / 02</span>
+            <h2 id="info-title">Informações Adicionais</h2>
+            <div class="contract-paywall">
+                
+                <h3>Escolha seu valor.<br>O futuro se adapta a você.</h3>
+                <div class="pay-segments" role="group" aria-label="Período de contratação"><span class="pay-pill"></span><button type="button" aria-pressed="true" data-plan="0">Mensal</button><button type="button" aria-pressed="false" data-plan="1">Anual</button></div>
+                <div class="pay-amount" aria-live="polite"><span class="pay-currency">R$</span><span class="pay-digits">1.500</span><span class="pay-period">/mês</span></div>
+                <div class="pay-slider" role="slider" tabindex="0" aria-label="Valor da contratação" aria-valuemin="0" aria-valuemax="4" aria-valuenow="3"><div class="pay-track"></div><div class="pay-fill"></div><div class="pay-ticks" aria-hidden="true"></div><div class="pay-thumb" aria-hidden="true"><i></i></div></div>
+                <div class="pay-caption" aria-live="polite">Assistência inteligente para sua rotina.</div>
+                <a class="pay-cta" href="contato.html">Solicitar contratação <span aria-hidden="true">→</span></a>
+                <small>Simulação fictícia · Nenhuma cobrança será realizada.</small>
+            </div>
+        </section>
         </div>
     </main>
 
