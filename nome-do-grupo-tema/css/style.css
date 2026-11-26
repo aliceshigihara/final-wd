@@ -102,6 +102,9 @@ SEÇÃO 2: ESTRUTURA E NAVEGAÇÃO
 .main-nav a:hover, .main-nav a.active { border-bottom-color: #f2c14e; color: #f2c14e; }
 .page-content, .section, .gallery-section, .form-section { margin: 0 auto; max-width: 1100px; padding: 3rem 5%; }
 .hero { padding: 3rem 5%; text-align: center; }
+.landing-hero-content {
+    color:rgba(56, 189, 248, 0.42);
+}
 .hero .banner {
     filter: brightness(0) invert(1);
     margin: 0 auto 2rem;
@@ -330,7 +333,6 @@ li {
     html { scroll-behavior: auto; }
 }
 
-<<<<<<< HEAD
 /* Landing page: scoped so the other pages retain their original layout. */
 .landing-page { overflow-x: clip; }
 .landing-intro { position: relative; isolation: isolate; min-height: 100vh; min-height: 100svh; }
@@ -344,12 +346,3 @@ li {
 .landing-reveal { position: relative; opacity: var(--reveal-opacity, 1); transform: translateY(var(--reveal-offset, 0px)); }
 .landing-page .site-footer { background: #08152f; }
 @media (prefers-reduced-motion: reduce) { .landing-reveal { opacity: 1; transform: none; } .topography-backdrop canvas { opacity: 1; } }
-=======
-.site-header {
-    position: sticky;
-    top: 0;
-    background-color: #08152f;
-    z-index: 10;
-    opacity: 70%;
-}
->>>>>>> be5c5731020a18ef0b7279d8e1c747b04a3bb137
