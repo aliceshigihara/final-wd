@@ -329,13 +329,6 @@ SEÇÃO 5: RESPONSIVIDADE
 .landing-reveal { position: relative; opacity: var(--reveal-opacity, 1); transform: translateY(var(--reveal-offset, 0px)); }
 .landing-page .site-footer { background: #08152f; }
 @media (prefers-reduced-motion: reduce) { .landing-reveal { opacity: 1; transform: none; } .topography-backdrop canvas { opacity: 1; } }
-<<<<<<< HEAD
-=======
-.site-header {
-    position: sticky;
-    top: 0;
-    background-color: #08152f;
-    z-index: 10;
-    opacity: 70%;
-}
->>>>>>> baee92a (Services bros fix)
+
+/* Shared brand mark: use the existing transparent asset. */
+.site-header .logo img { width: clamp(100px, 12vw, 180px); height: auto; object-fit: contain; filter: brightness(0) invert(1); }
