@@ -3,8 +3,7 @@
 TRABALHO FINAL - WEB DESIGN
 Tema do Projeto: [Nome do Tema]
 Data de Entrega: 03/12/2026
-Integrantes: 
-1. Alice
+Integrantes: 1. Alice
 2. Airk
 3. Daniel
 ==============================================================================
@@ -23,8 +22,7 @@ html {
 }
 
 body { background: #08152f; color: #222; font-family: Arial, sans-serif; line-height: 1.6; }
-img { display: block; max-width: 100%; }
-.banner { display: block; max-width: 50%;}
+img { display: block; max-width: 50%; }
 a { color: inherit; text-decoration: none; }
 ul { list-style: none; }
 
@@ -102,9 +100,6 @@ SEÇÃO 2: ESTRUTURA E NAVEGAÇÃO
 .main-nav a:hover, .main-nav a.active { border-bottom-color: #f2c14e; color: #f2c14e; }
 .page-content, .section, .gallery-section, .form-section { margin: 0 auto; max-width: 1100px; padding: 3rem 5%; }
 .hero { padding: 3rem 5%; text-align: center; }
-.landing-hero-content {
-    color:rgba(56, 189, 248, 0.42);
-}
 .hero .banner {
     filter: brightness(0) invert(1);
     margin: 0 auto 2rem;
@@ -121,7 +116,7 @@ SEÇÃO 3: CONTEÚDO
 ==========================================================================
 */
 
-h1, h2, h3 { color: #ffffff; margin-bottom: 1rem; }
+h1, h2, h3 { color: #1f3a5f; margin-bottom: 1rem; }
 .content-list { display: grid; gap: .75rem; margin-left: 1.25rem; }
 .content-list li { list-style: disc; }
 .button { background: #f2c14e; border: 1px solid #d49d16; border-radius: .25rem; color: #222; cursor: pointer; display: inline-block; font: inherit; font-weight: bold; padding: .75rem 1.25rem; }
@@ -317,18 +312,6 @@ SEÇÃO 5: RESPONSIVIDADE
     .gallery { grid-template-columns: 1fr; }
 }
 
-/*
-=============================
-Home/Index& servicos: adjustments
-=============================
-*/
-p {
-    color: white;
-}
-
-li {
-    color: aliceblue;
-}
 @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
 }
