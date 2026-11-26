@@ -9,3 +9,17 @@
 .bento-network{inset:0 0 auto auto;width:100%;height:240px;transform:scale(.95);transform-origin:top right}.bento-network svg{width:100%;height:100%;display:block}.bento-contact:hover .bento-network,.bento-contact:focus-visible .bento-network{transform:scale(1.05)}.bento-wires path,.bento-beams path{fill:none;stroke:#3c587b;stroke-width:1.5}.bento-beams path{stroke:url(#bento-beam);stroke-width:3;stroke-dasharray:48 180;animation:bento-beam 3.5s linear infinite}.bento-beams path:nth-child(2){animation-delay:-1.2s}.bento-beams path:nth-child(3){animation-delay:-2.2s}.bento-beams path:nth-child(4){animation-delay:-.5s}@keyframes bento-beam{to{stroke-dashoffset:-456}}.bento-nodes{fill:#14243d;stroke:#6288b4;stroke-width:1}.bento-node-labels{fill:#bddbf7;font-size:10px;text-anchor:middle;letter-spacing:1px}
 .bento-ready .bento-reveal{opacity:0;translate:0 30px;transition:opacity .8s ease,translate .8s cubic-bezier(.2,.65,.2,1),border-color .3s,box-shadow .3s}.bento-ready .bento-reveal.is-visible{opacity:1;translate:0 0}.bento-ready .bento-services{transition-delay:.09s}.bento-ready .bento-contact{transition-delay:.16s}.bento-paused .bento-art *{animation-play-state:paused!important}
 @media(max-width:760px){.bento-grid{grid-template-columns:1fr}.bento-about,.bento-services,.bento-contact{grid-column:1}.bento-card{min-height:285px}.bento-network{height:200px}.bento-notifications{padding-inline:8%}}@media(hover:none){.bento-copy{transform:translateY(-28px)}.bento-cta{opacity:1;transform:none}}@media(prefers-reduced-motion:reduce){.bento-ready .bento-reveal{opacity:1;translate:none;transition:none}.bento-art *{animation:none!important}.bento-card *{transition:none!important}}
+
+/* Seamless fade from Magic Rings into the Bento section. */
+.landing-page .landing-intro::after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0;
+    height: clamp(110px, 24vh, 300px);
+    z-index: 0;
+    pointer-events: none;
+    background: linear-gradient(to bottom, rgba(8,21,47,0) 0%, rgba(8,21,47,.2) 25%, rgba(8,21,47,.65) 58%, #08152f 100%);
+}
+.landing-page .landing-bento::before {
+    mask-image: linear-gradient(to bottom, transparent, black 24%, black 76%, transparent);
+}
