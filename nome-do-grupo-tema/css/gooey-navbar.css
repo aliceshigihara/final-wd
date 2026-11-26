@@ -1,0 +1,14 @@
+/* useLayouts Gooey Navbar: original default styling, adapted to the existing header. */
+.site-header .main-nav.gooey-nav {position:relative; flex:none; margin:0; padding:0; user-select:none; --gooey-fill:#203a5a; --gooey-px:24px; --gooey-font:15px; --gooey-height:47px;}
+.gooey-nav .gooey-contour {position:absolute; inset:0; width:100%; height:100%; overflow:visible; pointer-events:none; z-index:0;}
+.site-header .gooey-nav ul {position:relative; display:flex; gap:0; align-items:center; width:max-content; z-index:1; margin:0; padding:0;}
+.site-header .gooey-nav li {flex:none; margin:0; padding:0;}
+.site-header .gooey-nav a,.site-header .gooey-nav a.active,.site-header .gooey-nav a:hover {display:flex; align-items:center; justify-content:center; position:relative; height:var(--gooey-height); padding:0 var(--gooey-px); font:600 var(--gooey-font)/1 Inter,"Inter Placeholder",system-ui,sans-serif; letter-spacing:-.1px; text-transform:uppercase; white-space:nowrap; text-align:center; color:#c4ddf5; background:var(--gooey-fill); border:0; border-radius:12px; text-decoration:none; will-change:transform;}
+.site-header .gooey-nav.is-ready a {background:transparent;}
+.site-header .gooey-nav a.is-hovered,.site-header .gooey-nav a:hover {color:#fff;}
+.site-header .gooey-nav a[aria-current="page"]::after {content:""; position:absolute; left:50%; bottom:5px; margin-left:-2px; width:4px; height:4px; border-radius:50%; background:#38bdf8; box-shadow:0 0 8px #38bdf8;}
+.site-header .gooey-nav a:focus-visible {outline:2px solid #7dd3fc; outline-offset:-4px;}
+@media(max-width:760px){.site-header .main-nav.gooey-nav{--gooey-px:12px;--gooey-font:13px;--gooey-height:45px;}}
+@media(max-width:420px){.site-header .main-nav.gooey-nav{--gooey-px:7px;--gooey-font:11px;--gooey-height:43px;}}
+
+.gooey-nav .gooey-contour path { fill: var(--gooey-fill); }
