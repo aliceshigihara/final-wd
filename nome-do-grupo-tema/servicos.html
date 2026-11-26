@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div id="letter-glitch-services" class="letter-glitch" aria-hidden="true"></div>
     <header class="site-header">
         <a class="logo" href="index.html">
             <img src="img/logo.png" alt="[Descrição da logo do projeto]">
@@ -23,16 +24,13 @@
 
     <main class="page-content">
         <section class="section">
-            <h1>Personagens do Jogo</h1>
-            <p>[Introdução dos serviços ou produtos]</p>
+            <h1>Catálogo CyberLife</h1>
+            <p>Modelos androides disponíveis para aquisição e serviços especializados.</p>
         </section>
 
         <section class="gallery-section">
-            <h2>[Conhe]</h2>
+            <h2>Selecione um modelo</h2>
             <div class="gallery">
-                <article class="gallery-item" id="profile-card-1"></article>
-                <article class="gallery-item" id="profile-card-2"></article>
-                <article class="gallery-item" id="profile-card-3"></article>
             </div>
         </section>
     </main>
@@ -41,6 +39,7 @@
         <p>DBH IFC &copy; 2026</p>
     </footer>
     <script src="js/profile-card.js"></script>
+    <script src="js/letter-glitch.js"></script>
     <script>
         new ProfileCard('#profile-card-1', {
             name: 'Connor',
@@ -82,36 +81,6 @@
             contactText: 'Ver mais',
             avatarUrl: 'img/imagem-3.jpg',
             miniAvatarUrl: 'img/imagem-3.jpg',
-            theme: 'dark',
-            holo: 0.8,
-            glare: 0.5,
-            tiltStrength: 12,
-            enableTilt: true,
-            intro: true
-        });
-            new ProfileCard('#profile-card-3', {
-            name: '[AZ110]',
-            title: '[Projetado para o cuidado infantil.]',
-            handle: 'item-3',
-            status: 'Disponível',
-            contactText: 'Ver mais',
-            avatarUrl: 'img/AZ110_Android.png',
-            miniAvatarUrl: 'img/AZ110_Android.png',
-            theme: 'dark',
-            holo: 0.8,
-            glare: 0.5,
-            tiltStrength: 12,
-            enableTilt: true,
-            intro: true
-        });
-         new ProfileCard('#profile-card-3', {
-            name: '[AZ110]',
-            title: '[Projetado para o cuidado infantil.]',
-            handle: 'item-3',
-            status: 'Disponível',
-            contactText: 'Ver mais',
-            avatarUrl: 'img/AZ110_Android.png',
-            miniAvatarUrl: 'img/AZ110_Android.png',
             theme: 'dark',
             holo: 0.8,
             glare: 0.5,
