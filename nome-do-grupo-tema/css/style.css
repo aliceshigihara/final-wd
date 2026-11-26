@@ -332,3 +332,8 @@ SEÇÃO 5: RESPONSIVIDADE
 
 /* Shared brand mark: use the existing transparent asset. */
 .site-header .logo img { width: clamp(100px, 12vw, 180px); height: auto; object-fit: contain; filter: brightness(0) invert(1); }
+
+
+.contato_p {
+    color: aliceblue;
+}
