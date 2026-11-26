@@ -62,6 +62,24 @@ ul { list-style: none; }
     pointer-events: none;
 }
 
+.scanner-container {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.scanner-canvas {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
 .site-header,
 main,
 .site-footer {
@@ -98,7 +116,7 @@ SEÇÃO 3: CONTEÚDO
 ==========================================================================
 */
 
-h1, h2, h3 { color: #1f3a5f; margin-bottom: 1rem; }
+h1, h2, h3 { color: #ffffff; margin-bottom: 1rem; }
 .content-list { display: grid; gap: .75rem; margin-left: 1.25rem; }
 .content-list li { list-style: disc; }
 .button { background: #f2c14e; border: 1px solid #d49d16; border-radius: .25rem; color: #222; cursor: pointer; display: inline-block; font: inherit; font-weight: bold; padding: .75rem 1.25rem; }
@@ -297,3 +315,17 @@ SEÇÃO 5: RESPONSIVIDADE
 @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
 }
+
+/* Landing page: scoped so the other pages retain their original layout. */
+.landing-page { overflow-x: clip; }
+.landing-intro { position: relative; isolation: isolate; min-height: 100vh; min-height: 100svh; }
+.landing-intro .magic-rings { position: absolute; }
+.landing-hero-content { position: relative; z-index: 1; }
+.landing-details { position: relative; isolation: isolate; min-height: 115vh; display: grid; align-items: center; overflow: hidden; background: #08152f; color: #e0efff; }
+.landing-details h2, .landing-details h3 { color: #e0efff; }
+.topography-backdrop { position: absolute; inset: 0; z-index: -1; pointer-events: none; background: radial-gradient(ellipse at 50% 65%, #10294b, #08152f 75%); }
+.topography-backdrop canvas { position: absolute; width: 100%; height: 100%; inset: 0; display: block; opacity: var(--topography-opacity, 1); }
+.landing-details::before { content: ''; position: absolute; inset: 0 0 auto; height: 24vh; background: linear-gradient(#08152f, transparent); pointer-events: none; z-index: 0; }
+.landing-reveal { position: relative; opacity: var(--reveal-opacity, 1); transform: translateY(var(--reveal-offset, 0px)); }
+.landing-page .site-footer { background: #08152f; }
+@media (prefers-reduced-motion: reduce) { .landing-reveal { opacity: 1; transform: none; } .topography-backdrop canvas { opacity: 1; } }

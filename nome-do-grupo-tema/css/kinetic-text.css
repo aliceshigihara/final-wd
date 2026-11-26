@@ -1,0 +1,38 @@
+/* Vanilla CSS adaptation of Magic UI Kinetic Text (MIT), credited to @abdmjd1.
+   https://magicui.design/r/kinetic-text.json */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300..900&display=swap');
+.landing-page .kinetic-title {
+    --hover-padding: calc(1em / 12);
+    --text-stroke-width: calc(1em * 125 / 6000);
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: baseline;
+    width: 100%;
+    margin: 0 auto 2rem;
+    color: #fff;
+    font-family: 'Inter', 'Inter Display', Arial, sans-serif;
+    font-size: clamp(2.4rem, 11vw, 10rem);
+    font-weight: 300;
+    font-optical-sizing: auto;
+    letter-spacing: -.05em;
+    line-height: 1.2;
+}
+.kinetic-title > span {
+    will-change: font-weight, -webkit-text-stroke-width, padding;
+    -webkit-text-stroke-color: transparent;
+    -webkit-text-stroke-width: var(--text-stroke-width);
+    transition: font-weight .4s, -webkit-text-stroke-color .4s, padding .4s;
+}
+.kinetic-title > span:has(+ span + span:hover),
+.kinetic-title > span:hover + span + span { font-weight: 400; }
+.kinetic-title > span:has(+ span:hover),
+.kinetic-title > span:hover + span { font-weight: 600; padding-inline: var(--hover-padding); }
+.kinetic-title > span:hover {
+    font-weight: 900;
+    padding-inline: var(--hover-padding);
+    -webkit-text-stroke-color: currentColor;
+    -webkit-text-stroke-width: calc(var(--text-stroke-width) * 2);
+}
+.landing-page .hero-tagline { color: #1f3a5f; font-size: 2em; font-weight: bold; margin-bottom: 1rem; }
+@media (prefers-reduced-motion: reduce) { .kinetic-title > span { transition: none; } }

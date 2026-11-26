@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div id="scanner-about" class="scanner-container" aria-hidden="true"></div>
     <header class="site-header">
         <a class="logo" href="index.html">
             <img src="img/logo.png" alt="[Descrição da logo do projeto]">
@@ -39,5 +40,40 @@
     <footer class="site-footer">
         <p>[Nome do projeto] &copy; 2026</p>
     </footer>
+    <script src="js/scanner.js"></script>
+    <script>
+        new Scanner('#scanner-about', {
+            color1: '#5227FF',
+            color2: '#38BDF8',
+            color3: '#FFFFFF',
+            speed: 0.5,
+            sweepSpeed: 0.25,
+            sweepWidth: 1.6,
+            trail: 0.5,
+            reverse: false,
+            scale: 1.5,
+            frequency: 2,
+            ripple: 0.22,
+            bandDensity: 11,
+            lineWidth: 1.2,
+            glow: 0.6,
+            scanDirection: 'vertical',
+            colorSpread: 0.7,
+            brightness: 1,
+            vignette: 0.3,
+            scanline: true,
+            scanlineIntensity: 0.5,
+            grain: true,
+            grainIntensity: 0.04,
+            opacity: 1,
+            mouseInteraction: true,
+            mouseRadius: 0.5,
+            mouseStrength: 0.7,
+            mouseMode: 'repel',
+            clickEffect: 'ping',
+            intro: true,
+            lightMode: false
+        });
+    </script>
 </body>
 </html>
