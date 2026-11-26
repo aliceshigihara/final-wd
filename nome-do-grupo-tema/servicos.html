@@ -41,114 +41,53 @@
     <script src="js/profile-card.js"></script>
     <script src="js/letter-glitch.js"></script>
     <script>
-        new LetterGlitch('#letter-glitch-services', {
-            glitchColors: ['#38bdf8', '#1e3fd8', '#a5d8ff', '#ffffff'],
-            baseColor: '#08152f',
-            baseOpacity: 0.14,
-            fontSize: 14,
-            spacing: 0.7,
-            density: 0.55,
-            glitchAmount: 0.5,
-            speed: 1,
-            smooth: true,
-            interactive: true,
-            cursorRadius: 140,
-            clickEffect: 'tear',
-            flow: 0.5,
-            edgeFade: 0.15,
-            centerFade: 0,
-            intro: true,
-            lightMode: false,
-            backgroundColor: '#08152f'
+        new ProfileCard('#profile-card-1', {
+            name: 'Connor',
+            title: '[Descrição do item 1]',
+            handle: 'item-1',
+            status: 'Disponível',
+            contactText: 'Ver mais',
+            avatarUrl: 'img/imagem-1.jpg',
+            miniAvatarUrl: 'img/imagem-1.jpg',
+            theme: 'dark',
+            holo: 0.8,
+            glare: 0.5,
+            tiltStrength: 12,
+            enableTilt: true,
+            intro: true
         });
 
-        const androides = [
-            {
-                name: 'Connor',
-                title: 'Modelo RK800 • Unidade de investigação',
-                handle: 'DETROIT POLICE DEPT.',
-                status: 'R$ 89.900',
-                avatarUrl: 'img/imagem-1.jpg'
-            },
-            {
-                name: 'Kara',
-                title: 'Modelo AX400 • Assistente doméstica',
-                handle: 'LINHA RESIDENCIAL',
-                status: 'R$ 42.500',
-                avatarUrl: 'img/imagem-2.jpg'
-            },
-            {
-                name: 'Markus',
-                title: 'Modelo RK200 • Assistente de cuidados',
-                handle: 'UNIDADE PARTICULAR',
-                status: 'R$ 68.300',
-                avatarUrl: 'img/imagem-3.jpg'
-            },
-            {
-                name: 'Markus',
-                title: 'Modelo RK200 • Assistente de cuidados',
-                handle: 'UNIDADE PARTICULAR',
-                status: 'R$ 68.300',
-                avatarUrl: 'img/imagem-3.jpg'
-            },
-                        {
-                name: 'Markus',
-                title: 'Modelo RK200 • Assistente de cuidados',
-                handle: 'UNIDADE PARTICULAR',
-                status: 'R$ 68.300',
-                avatarUrl: 'img/imagem-3.jpg'
-            },
-                        {
-                name: 'Markus',
-                title: 'Modelo RK200 • Assistente de cuidados',
-                handle: 'UNIDADE PARTICULAR',
-                status: 'R$ 68.300',
-                avatarUrl: 'img/imagem-3.jpg'
-            },
-            {
-                name: 'Markus',
-                title: 'Modelo RK200 • Assistente de cuidados',
-                handle: 'UNIDADE PARTICULAR',
-                status: 'R$ 68.300',
-                avatarUrl: 'img/imagem-3.jpg'
-            },
-            {
-                name: 'Markus',
-                title: 'Modelo RK200 • Assistente de cuidados',
-                handle: 'UNIDADE PARTICULAR',
-                status: 'R$ 68.300',
-                avatarUrl: 'img/imagem-3.jpg'
-            },
-                        {
-                name: 'Markus',
-                title: 'Modelo RK200 • Assistente de cuidados',
-                handle: 'UNIDADE PARTICULAR',
-                status: 'R$ 68.300',
-                avatarUrl: 'img/imagem-3.jpg'
-            }
-        ];
+        new ProfileCard('#profile-card-2', {
+            name: '[Kara]',
+            title: '[Descrição do item 2]',
+            handle: 'item-2',
+            status: 'Disponível',
+            contactText: 'Ver mais',
+            avatarUrl: 'img/imagem-2.jpg',
+            miniAvatarUrl: 'img/imagem-2.jpg',
+            theme: 'dark',
+            holo: 0.8,
+            glare: 0.5,
+            tiltStrength: 12,
+            enableTilt: true,
+            intro: true
+        });
 
-        for (const android of androides) {
-            const card = document.createElement('article');
-            card.className = 'gallery-item';
-            document.querySelector('.gallery').appendChild(card);
-
-            new ProfileCard(card, {
-                name: android.name,
-                title: android.title,
-                handle: android.handle,
-                status: android.status,
-                contactText: 'Adquirir',
-                avatarUrl: android.avatarUrl,
-                miniAvatarUrl: android.avatarUrl,
-                theme: 'dark',
-                holo: 0.8,
-                glare: 0.5,
-                tiltStrength: 12,
-                enableTilt: true,
-                intro: true
-            });
-        }
+        new ProfileCard('#profile-card-3', {
+            name: '[Markus]',
+            title: '[Descrição do item 3]',
+            handle: 'item-3',
+            status: 'Disponível',
+            contactText: 'Ver mais',
+            avatarUrl: 'img/imagem-3.jpg',
+            miniAvatarUrl: 'img/imagem-3.jpg',
+            theme: 'dark',
+            holo: 0.8,
+            glare: 0.5,
+            tiltStrength: 12,
+            enableTilt: true,
+            intro: true
+        });
     </script>
 </body>
 </html>
