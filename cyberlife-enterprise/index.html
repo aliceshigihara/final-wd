@@ -11,6 +11,8 @@
     <script src="js/gooey-navbar.js" defer></script>
     <link rel="stylesheet" href="css/contract.css">
     <script src="js/contract.js" defer></script>
+    <link rel="stylesheet" href="css/quiz.css">
+
 </head>
 <body class="landing-page">
     <div class="landing-intro">
@@ -24,6 +26,7 @@
                 <li><a class="active" href="index.html">Home</a></li>
                 <li><a href="sobre.html">Sobre</a></li>
                 <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="#quiz-section">Quiz</a></li>
                 <li><a href="contato.html">Contato</a></li>
             </ul>
         </nav>
@@ -82,7 +85,10 @@
             </div>
         </div>
     </section>
-
+    <section id="quiz-section" class="quiz-section" aria-label="Quiz: qual android combina com você?">
+        <div id="quiz-bg" class="quiz-bg" aria-hidden="true"></div>
+        <div id="quiz" class="quiz" aria-live="polite"></div>
+    </section>
     <main class="landing-details">
         <div class="topography-backdrop" aria-hidden="true"><canvas id="topography-home"></canvas></div>
         <div class="landing-reveal">
@@ -121,6 +127,12 @@
     <script src="js/topography.js" defer></script>
     <script src="js/bento.js" defer></script>
     <script src="js/text-pressure.js" defer></script>
+    <script src="js/magic-rings.js"></script>
+    <script src="js/topography.js" defer></script>
+    <script src="js/bento.js" defer></script>
+    <script src="js/text-pressure.js" defer></script>
+    <script src="js/quiz-bg.js" defer></script>
+    <script src="js/quiz.js" defer></script>
     <script>
         new MagicRings('#magic-rings-home', {
             color: '#38BDF8',
