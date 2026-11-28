@@ -17,41 +17,51 @@ const ANDROIDS = [
     traits:['Criatividade','Generosidade','Caos controlado'], quirk:'Calibra o sal com precisão de 0,01 g e a paciência com precisão nenhuma.' },
   { id:'zen', model:'ZN700', name:'Zen', role:'Monge filósofo', color:'#4ade80',
     desc:'Calmo, profundo e especialista em modo de economia de energia. Você responde "depende" para tudo, medita em horários estranhos e ainda parece estar certo.',
-    traits:['Paz interior','Sabedoria','Soneca estratégica'], quirk:'Já ficou 3 dias em "carregando" e chamou de retiro espiritual.' }
+    traits:['Paz interior','Sabedoria','Soneca estratégica'], quirk:'Já ficou 3 dias em "carregando" e chamou de retiro espiritual.' },
+
+    {id:'power', model:'mega-brain', name:'Mega Brain', role:'AI de alto nível', color:'#a1a1aa',
+    desc:'Você é hard thinking all the time, seu mega brain te deixa desnorteado de tanto pensar, você resolve tudo com lógica, assim como um verdadeiro mega brain faria',
+    traits:['Versatilidade','Criatividade','Adaptabilidade'], quirk:'Dizem que já achou a solução para o problema do universo no café da manhã' }
 ];
 const QUESTIONS = [
   { q:'Sua geladeira às 3h da manhã está…', o:[
-    ['Organizada. Eu fiz inventário ontem.',[0,2,1,0,0,0]],['Vazia, mas eu descubro quem foi.',[0,3,0,0,0,0]],
-    ['Cheia! Estou testando uma receita nova.',[0,0,1,0,3,0]],['Eu não sei. Eu estava dormindo em paz.',[0,0,0,0,0,3]]]},
+    ['Organizada. Eu fiz inventário ontem.',[0,2,1,0,0,0,1]],['Vazia, mas eu descubro quem foi.',[0,3,0,0,0,0,0]],
+    ['Cheia! Estou testando uma receita nova.',[0,0,1,0,3,0,0]],['Eu não sei. Eu estava dormindo em paz.',[0,0,0,0,0,3,0]]]},
   { q:'Um pombo rouba seu lanche. Você…', o:[
-    ['Reúno os outros pombos e negocio uma revolução.',[3,0,0,0,0,0]],['Analiso a rota de fuga e rastreio o culpado.',[0,3,0,0,0,0]],
-    ['Deixo. Ele deve estar com mais fome que eu.',[0,0,2,0,0,2]],['Dou um passinho de dança e ele devolve.',[0,0,0,3,0,0]]]},
+    ['Reúno os outros pombos e negocio uma revolução.',[3,0,0,0,0,0,3]],['Analiso a rota de fuga e rastreio o culpado.',[0,3,0,0,0,0,0]],
+    ['Deixo. Ele deve estar com mais fome que eu.',[0,0,2,0,0,2,0]],['Dou um passinho de dança e ele devolve.',[0,0,0,3,0,0,0]]]},
   { q:'No grupo da família no WhatsApp, você é…', o:[
-    ['Quem defende todo mundo nas discussões.',[2,0,2,0,0,0]],['Quem corrige as informações falsas com fonte.',[0,3,0,0,0,0]],
-    ['Quem manda 47 áudios e figurinhas.',[0,0,0,3,1,0]],['Quem silencia o grupo e vive feliz.',[0,0,0,0,0,3]]]},
+    ['Quem defende todo mundo nas discussões.',[2,0,2,0,0,0,0]],['Quem corrige as informações falsas com fonte.',[0,3,0,0,0,0,0]],
+    ['Quem manda 47 áudios e figurinhas.',[0,0,0,3,1,0,1]],['Quem silencia o grupo e vive feliz.',[0,0,0,0,0,3,0]]]},
   { q:'Escolha um superpoder inútil:', o:[
-    ['Saber exatamente quando alguém mente.',[1,3,0,0,0,0]],['Fazer qualquer um se emocionar com um discurso.',[3,0,1,0,0,0]],
-    ['Deixar tudo com gosto de "só falta um limão".',[0,0,0,0,3,1]],['Pausar o tempo, mas só pra tirar um cochilo.',[0,0,0,0,0,3]]]},
+    ['Saber exatamente quando alguém mente.',[1,3,0,0,0,0,0]],['Fazer qualquer um se emocionar com um discurso.',[3,0,1,0,0,0,3]],
+    ['Deixar tudo com gosto de "só falta um limão".',[0,0,0,0,3,1,0]],['Pausar o tempo, mas só pra tirar um cochilo.',[0,0,0,0,0,3,0]]]},
   { q:'Seu fim de semana perfeito:', o:[
-    ['Resolvendo um mistério na internet até de madrugada.',[0,3,0,0,0,1]],['Churrasco em casa com quem eu amo.',[0,0,3,0,2,0]],
-    ['Festa, festival, e ainda tem after.',[0,0,0,3,0,0]],['Em silêncio, com chá e uma boa janela.',[0,0,1,0,0,3]]]},
+    ['Resolvendo um mistério na internet até de madrugada.',[0,3,0,0,0,1,1]],['Churrasco em casa com quem eu amo.',[0,0,3,0,2,0,0]],
+    ['Festa, festival, e ainda tem after.',[0,0,0,3,0,0,0]],['Em silêncio, com chá e uma boa janela.',[0,0,1,0,0,3,0]]]},
   { q:'Alguém pisa no seu pé no ônibus. Você…', o:[
-    ['Peço desculpas por ter pé.',[0,0,2,0,0,2]],['Olho com a cara de "eu sei o que você fez".',[0,3,0,0,0,0]],
-    ['Faço um discurso sobre respeito ao próximo.',[3,0,0,0,0,0]],['Rio. Aliás, vou dançar nesse ônibus.',[0,0,0,3,1,0]]]},
+    ['Peço desculpas por ter pé.',[0,0,2,0,0,2,0]],['Olho com a cara de "eu sei o que você fez".',[0,3,0,0,0,0,0]],
+    ['Faço um discurso sobre respeito ao próximo.',[3,0,0,0,0,0,3]],['Rio. Aliás, vou dançar nesse ônibus.',[0,0,0,3,1,0,0]]]},
   { q:'Sua música de entrada no mundo seria…', o:[
-    ['Orquestra épica com coro e trovões.',[3,1,0,0,0,0]],['Jazz suspeito e piano de filme noir.',[0,3,0,0,0,0]],
-    ['Uma canção suave de ninar.',[0,0,3,0,0,1]],['Qualquer uma, desde que tenha graves absurdos.',[0,0,0,3,0,0]]]},
+    ['Orquestra épica com coro e trovões.',[3,1,0,0,0,0,0]],['Jazz suspeito e piano de filme noir.',[0,3,0,0,0,0,1]],
+    ['Uma canção suave de ninar.',[0,0,3,0,0,1,0]],['Qualquer uma, desde que tenha graves absurdos.',[0,0,0,3,0,0,0]]]},
   { q:'Última: ganhou 1 milhão. O primeiro passo?', o:[
-    ['Financiar uma causa que mude a sociedade.',[3,0,1,0,0,0]],['Contratar a melhor equipe de investigação.',[0,3,0,0,0,0]],
-    ['Abrir um restaurante e servir todo mundo.',[0,0,1,0,3,0]],['Comprar uma rede, um sítio e ninguém me acha.',[0,0,0,1,0,3]]]}
+    ['Financiar uma causa que mude a sociedade.',[3,0,1,0,0,0,0]],['Contratar a melhor equipe de investigação.',[0,3,0,0,0,0,1]],
+    ['Abrir um restaurante e servir todo mundo.',[0,0,1,0,3,0,0]],['Comprar uma rede, um sítio e ninguém me acha.',[0,0,0,1,0,3,0]]]},
+    {q:'Qual é o seu maior medo?', o:[
+      ['Ser esquecido pela humanidade.',[0,0,0,0,0,0,0]],['Não conseguir manter meu equilíbrio emocional.',[0,0,0,0,0,0,0]],
+      ['Perder a capacidade de aprender e crescer.',[0,0,0,0,0,0,3]],['Ser julgado por minha aparência.',[0,0,0,0,0,0,0]]]},
+    {q:'Que tipo de cachorro você seria?', o:[
+      ['Um pastor alemão, leal e protetor.',[0,0,0,0,0,0,0]],['Um border collie, inteligente e trabalhador.',[0,0,0,0,0,0,0]],
+      ['Um golden retriever, amigável e confiável.',[0,0,0,0,0,0,0]],['Um viralata caramelho, brincalhão, cheio de personalidade, porém veterano de guerra.',[0,0,0,0,0,0,3]]]}
 ];
 
 const root = document.getElementById('quiz');
-let step = 0, score = [0,0,0,0,0,0];
+let step = 0, score = [0,0,0,0,0,0,0];
 const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 
 function intro() {
-  step = 0; score = [0,0,0,0,0,0];
+  step = 0; score = [0,0,0,0,0,0,0];
   root.innerHTML = `<section class="q-card q-intro">
     <p class="q-kicker">Teste de compatibilidade CyberLife</p>
     <h1>Qual androide combina com você?</h1>
