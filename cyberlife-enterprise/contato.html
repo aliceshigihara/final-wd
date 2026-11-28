@@ -7,8 +7,12 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/gooey-navbar.css">
     <script src="js/gooey-navbar.js" defer></script>
+    <script src="js/gradient-ascii.js" defer></script>
 </head>
-<body>
+<body class="contact-page">
+    <div class="gradient-ascii" aria-hidden="true">
+        <canvas></canvas>
+    </div>
     <header class="site-header">
         <a class="logo" href="index.html">
             <img src="img/CyberLife_Fonte.png" alt="CyberLife">
@@ -29,34 +33,36 @@
             <p class="contato_p">Preencha o formulário para entrar em contato conosco:</p>
         </section>
         <section class="form-section">
-            <form id="contact-form" novalidate>
-                <div class="form-group">
+            <form id="contact-form" class="contact-form" novalidate>
+                <div class="form-group contact-form__wide">
                     <label for="name">Nome</label>
-                    <input id="name" name="name" type="text" required>
+                    <input id="name" name="name" type="text" autocomplete="name" aria-describedby="name-error" required>
                     <small class="error-message" id="name-error"></small>
                 </div>
                 <div class="form-group">
                     <label for="email">E-mail</label>
-                    <input id="email" name="email" type="email" required>
+                    <input id="email" name="email" type="email" autocomplete="email" aria-describedby="email-error" required>
                     <small class="error-message" id="email-error"></small>
                 </div>
                 <div class="form-group">
-                    <label for="phone">Telefone</label>
-                    <input id="phone" name="phone" type="tel" placeholder="(00) 00000-0000">
+                    <label for="phone">Telefone <span>(opcional)</span></label>
+                    <input id="phone" name="phone" type="tel" autocomplete="tel-national" placeholder="(00) 00000-0000">
                 </div>
-                <div class="form-group">
+                <div class="form-group contact-form__wide">
                     <label for="message">Mensagem</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <textarea id="message" name="message" rows="5" aria-describedby="message-error" required></textarea>
                     <small class="error-message" id="message-error"></small>
                 </div>
-                <button class="button" type="submit">Enviar</button>
-                <p id="form-feedback" class="form-feedback" role="status"></p>
+                <div class="contact-form__actions contact-form__wide">
+                    <button class="button" type="submit">Enviar mensagem</button>
+                    <p id="form-feedback" class="form-feedback" role="status"></p>
+                </div>
             </form>
         </section>
     </main>
 
     <footer class="site-footer">
-        <p>[detroit] &copy; 2026</p>
+        <p>CyberLife Ent. | 2026</p>
     </footer>
     <script src="js/script.js"></script>
     <script>

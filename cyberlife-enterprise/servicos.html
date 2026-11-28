@@ -34,7 +34,7 @@
             <p>Modelos androides disponíveis para aquisição e serviços especializados.</p>
         </section>
 
-        <section class="cl-showcase" aria-label="Modelos em destaque"><div class="cl-showcase-heading"><div><span>CYBERLIFE / MODELOS</span><h2>Conheça nossa linha</h2></div><div class="cl-carousel-controls"><button type="button" data-direction="-1" aria-label="Deslizar para esquerda">←</button><button type="button" data-direction="1" aria-label="Deslizar para direita">→</button></div></div><div class="cl-carousel" tabindex="0" aria-label="Carrossel de androides. Arraste ou use as setas."><article class="cl-slide"><img src="img/modelos_androids/RK800-pre_venda.webp" alt="Androide RK800" draggable="false"><div class="cl-slide-label"><span>RK800</span><p>Investigação avançada</p></div></article><article class="cl-slide"><img src="img/modelos_androids/AX400.webp" alt="Androide AX400" draggable="false"><div class="cl-slide-label"><span>AX400</span><p>Assistência residencial</p></div></article><article class="cl-slide"><img src="img/modelos_androids/RK200-male.jpg" alt="Androide RK200" draggable="false"><div class="cl-slide-label"><span>RK200</span><p>Cuidados personalizados</p></div></article><article class="cl-slide"><img src="img/modelos_androids/RK200-female.jpg" alt="Androide RK200" draggable="false"><div class="cl-slide-label"><span>RK200</span><p>Assistência particular</p></div></article></div><div class="cl-carousel-footer"><span>ARRASTE PARA EXPLORAR</span><div class="cl-carousel-progress" aria-hidden="true"><i></i></div></div></section>
+        <section class="cl-showcase" aria-label="Modelos em destaque"><div class="cl-showcase-heading"><div><span>CYBERLIFE / MODELOS</span><h2>Conheça nossa linha</h2></div><div class="cl-carousel-controls"><button type="button" data-direction="-1" aria-label="Deslizar para esquerda">←</button><button type="button" data-direction="1" aria-label="Deslizar para direita">→</button></div></div><div class="cl-carousel" tabindex="0" aria-label="Carrossel de androides. Arraste ou use as setas."><article class="cl-slide cl-slide--rk800"><img src="img/modelos_androids/RK800-pre_venda.webp" alt="Androide RK800" draggable="false"><div class="cl-slide-label"><span>RK800</span><p>Investigação avançada</p></div></article><article class="cl-slide"><img src="img/modelos_androids/AX400.webp" alt="Androide AX400" draggable="false"><div class="cl-slide-label"><span>AX400</span><p>Assistência residencial</p></div></article><article class="cl-slide"><img src="img/modelos_androids/RK200-male.jpg" alt="Androide RK200" draggable="false"><div class="cl-slide-label"><span>RK200</span><p>Cuidados personalizados</p></div></article><article class="cl-slide"><img src="img/modelos_androids/RK200-female.jpg" alt="Androide RK200" draggable="false"><div class="cl-slide-label"><span>RK200</span><p>Assistência particular</p></div></article></div><div class="cl-carousel-footer"><span>ARRASTE PARA EXPLORAR</span><div class="cl-carousel-progress" aria-hidden="true"><i></i></div></div></section>
         <section class="gallery-section">
             <h2>Selecione um modelo</h2>
             <div class="gallery">
@@ -43,7 +43,7 @@
     </main>
 
     <footer class="site-footer">
-        <p>DBH IFC &copy; 2026</p>
+        <p>CyberLife Ent. | 2026</p>
     </footer>
     <script src="js/profile-card.js"></script>
     <script>
@@ -55,14 +55,16 @@
                 title: 'Modelo RK800 • Unidade de investigação',
                 handle: 'DETROIT POLICE DEPT.',
                 status: 'R$ 89.900',
-                avatarUrl: 'img/modelos_androids/RK800-pre_venda.webp'
+                avatarUrl: 'img/modelos_androids/RK800-pre_venda.webp',
+                photoScale: 1.16
             },
             {
                 name: 'Kara',
                 title: 'Modelo AX400 • Assistente doméstica',
                 handle: 'LINHA RESIDENCIAL',
                 status: 'R$ 42.500',
-                avatarUrl: 'img/modelos_androids/kara-ax400_2.jpg'
+                avatarUrl: 'img/modelos_androids/kara-ax400_2.jpg',
+                photoPosition: '20% center'
             },
             {
                 name: 'Markus',
@@ -118,6 +120,12 @@
         for (const android of androides) {
             const card = document.createElement('article');
             card.className = 'gallery-item';
+            if (android.photoPosition) {
+                card.style.setProperty('--pc-photo-position', android.photoPosition);
+            }
+            if (android.photoScale) {
+                card.style.setProperty('--pc-photo-scale', android.photoScale);
+            }
             document.querySelector('.gallery').appendChild(card);
 
             new ProfileCard(card, {
