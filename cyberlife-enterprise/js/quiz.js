@@ -12,6 +12,7 @@ const ANDROIDS = [
   { id:'luna', model:'LX900', name:'Luna', role:'DJ & alma da festa', color:'#e879f9',
     desc:'Androide de entretenimento com 14 mil playlists e zero bateria social baixa. Onde você chega, a pista abre. Seu único defeito é não saber a hora de ir embora.',
     traits:['Energia infinita','Carisma','Ritmo perfeito'], quirk:'Já foi diagnosticada com "só mais uma música" crônico.' },
+    
   { id:'chef', model:'BK300', name:'Bruno', role:'Chef gourmet caótico', color:'#fb923c',
     desc:'Cozinha como um gênio e organiza a cozinha como um furacão. Você demonstra amor por comida, tem opiniões fortes sobre tempero e jamais aceita "qualquer coisa" como resposta.',
     traits:['Criatividade','Generosidade','Caos controlado'], quirk:'Calibra o sal com precisão de 0,01 g e a paciência com precisão nenhuma.' },
@@ -65,7 +66,7 @@ function intro() {
   root.innerHTML = `<section class="q-card q-intro">
     <p class="q-kicker">Teste de compatibilidade CyberLife</p>
     <h1>Qual androide combina com você?</h1>
-    <p>8 perguntas rápidas, um pouco aleatórias e nenhuma confiável cientificamente. Seis resultados possíveis, três deles vindos de Detroit.</p>
+    <p>10 perguntas rápidas, um pouco aleatórias e nenhuma confiável cientificamente. Sete resultados possíveis, três deles vindos de Detroit.</p>
     <button class="q-btn" id="start">Iniciar análise</button></section>`;
   document.getElementById('start').onclick = ask;
 }
@@ -73,7 +74,7 @@ function intro() {
 function ask() {
   const Q = QUESTIONS[step], pct = (step / QUESTIONS.length) * 100;
   root.innerHTML = `<section class="q-card">
-    <div class="q-progress" role="progressbar" aria-valuemin="0" aria-valuemax="${QUESTIONS.length}" aria-valuenow="${step}"><i style="width:${pct}%"></i></div>
+    <div class="q-progress" role="progressbar" aria-valuemin="0" aria-valuemax="${QUESTIONS.length}" ariavaluenow="${step}"><i style="width:${pct}%"></i></div>
     <p class="q-count">Pergunta ${step + 1} de ${QUESTIONS.length}</p>
     <h2>${esc(Q.q)}</h2>
     <div class="q-options">${Q.o.map((o, i) => `<button class="q-opt" data-i="${i}">${esc(o[0])}</button>`).join('')}</div></section>`;
